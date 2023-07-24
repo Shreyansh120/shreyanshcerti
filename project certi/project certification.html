@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</head>
+<style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-image: linear-gradient(135deg, #3498db, #e7ac09);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.logo img {
+  height: 70px; 
+}
+
+nav button, .search-button {
+  background-color: grey;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+nav button:hover, .search-button:hover {
+  background-color: #777;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+}
+.item{
+  height: 500px;
+  
+}
+.box_2 {
+  background-image: linear-gradient(135deg, #3498db, #e7ac09);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  
+}
+.box-text{
+  position: relative;
+  margin-left: 670px;
+}
+ 
+.card-container {
+  justify-content: stretch;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #dfd3d3;
+  
+}
+
+.card {
+  width: 300px;
+  justify-content: end;
+   
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.card h2 {
+  margin-top: 16px;
+  font-size: 24px;
+  color: #333;
+}
+
+.card p {
+  margin-top: 8px;
+  color: #666;
+}
+
+ 
+.team-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+ 
+.team-container {
+  max-width: 300px;
+  padding: 10px;
+  background-image: linear-gradient(135deg, #3498db, #e7ac09);
+}
+
+ 
+.team-container input[type=text], .team-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+ 
+.team-container input[type=text]:focus, .team-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+ 
+.team-container .btn {
+  background-color:#777;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom:10px;
+  opacity: 0.8;
+  border-radius: 5px;
+  
+}
+ 
+.team-container .cancel {
+  background-color: red;
+  border-radius: 5px;
+}
+
+ 
+.team-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+}
+
+ 
+
+
+</style>
+<body>
+    
+  <header>
+    <div class="logo">
+      <img src="https://diey8xpfs90ha.cloudfront.net/wp-content/uploads/2022/01/ipl-title.jpg" alt="Logo">
+    </div>
+   
+    <nav>
+      <button>Home</button>
+      
+      <button onclick="openAddteam()">Add New Team</button>
+      <button onclick="openAddPlayer()">Add New Player</button>
+    </nav>
+    <input type="text" id="searchInput" placeholder="Search player...">
+    <div class="player-list-container">
+      <div id="playerList"></div>
+    </div>
+  </header>
+        
+        <div id="owl-carousel" class="owl-carousel owl-theme">
+            <div class="item">
+              <img src="https://sportsdanka.com/wp-content/uploads/2023/03/TATA-IPL-2023.jpg" alt=" pics " />
+            </div>
+            <div class="item">
+              <img src="https://images.thequint.com/thequint%2F2023-04%2Fe53c9747-d7f4-4133-a36f-7ed14b2ae4c4%2FGhazi21091.jpg?auto=format%2Ccompress&fmt=webp&width=720&w=1200" alt=" pics " />
+            </div>
+            <div class="item">
+              <img src="https://e1.pxfuel.com/desktop-wallpaper/984/65/desktop-wallpaper-what-are-the-new-teams-in-ipl2022-tata-ipl.jpg" alt=" pics " />
+            </div>
+            <div class="item">
+              <img src="https://wallpapercave.com/wp/wp12232365.jpg" alt=" pics " />
+            </div>
+          </div>
+          <section>
+            <div class="box_2">
+              <h1 class="box-text">IPL TEAMS 2023</h1>
+            </div>
+          </section>
+          <section>
+            <div class="card-container">
+              <a href="#">
+              <div class="card">
+                <img onclick="card1()" src="https://hindubabynames.info/downloads/wp-content/themes/hbn_download/download/sports-ipl/lucknow-super-giants-logo.png" alt="Image 1"></a>
+                <h2>Lucknow Super Giants </h2>
+                <p>Matches Won-5</p>
+              </div>
+              <a href="#">
+                <div class="card">
+                <img onclick="card2()" src="https://hindubabynames.info/downloads/wp-content/themes/hbn_download/download/sports-ipl/mumbai-indians-logo.png" alt="Image 2"></a>
+                <h2>Mumbai Indians</h2>
+                <p>Matches Won-5</p>
+              </div>
+              <a href="#">
+              <div class="card">
+                <img onclick="card3()" src="https://hindubabynames.info/downloads/wp-content/themes/hbn_download/download/sports-ipl/chennai-super-kings-logo.png" alt="Image 3"></a>
+                <h2>Chennai Super Kings</h2>
+                <p>Matches Won-4</p>
+              </div>
+              <br>
+              <a href="#">
+                <div class="card">
+                  <img onclick="card4()" src="https://hindubabynames.info/downloads/wp-content/themes/hbn_download/download/sports-ipl/kolkata-knight-riders-logo.png" alt="Image 3"></a>
+                  <h2>Kolkata Knight Riders</h2>
+                  <p>Matches Won-5</p>
+                </div>
+                <a href="#">
+                  <div class="card">
+                    <img onclick="card5()" src="https://hindubabynames.info/downloads/wp-content/themes/hbn_download/download/sports-ipl/royal-challengers-bangalore-logo.png" alt="Image 3"></a>
+                    <h2>Royal Challengers Bangalore</h2>
+                    <p>Matches Won-5</p>
+                  </div>
+      
+              </div>
+            </div>
+            
+          </section>
+          <section>
+            <div class="team-popup" id="myteam">
+              <form class="team-container">
+                <h1>NEW TEAM</h1>
+            
+                <label for="TEAM NAME"><b>TEAM NAME</b></label>
+                <input type="text">
+
+                <label for="TEAM NAME"><b>TEAM ICON</b></label>
+                <input type="text">
+            
+                <label for="CHAMPIONSHIP WON"><b>CHAMPIONSHIP WON</b></label>
+                <input type="text">
+                <label for="PLAYER COUNT"><b>PLAYER COUNT</b></label>
+                <input type="text">
+            
+                <button type="submit" class="btn">ADD</button>
+                <button type="button" class="btn cancel" onclick="closeAddteam()">Close</button>
+              </form>
+            </div>
+          </section>
+          <section>
+            <div class="team-popup" id="myplayer">
+              <form class="team-container">
+                <h1>NEW PLAYER</h1>
+            
+                <label for="PLAYER NAME"><b>PLAYER NAME</b></label>
+                <input type="text">
+
+                <label for="IMAGE"><b>IMAGE</b></label>
+                <input type="text">
+            
+                <label for="PLAYER DESCRIPTION"><b>PLAYER DESCRIPTION</b></label>
+                <input type="text">
+                <label for="TEAM"><b>TEAM NAME</b></label>
+                <input type="text">
+                <label for="PLAYING STATUS"><b>PLAYING STATUS</b></label>
+                <input type="text">
+                <label for="P"><b>PRICE</b></label>
+                <input type="text">
+                 
+            
+                <button type="submit" class="btn">ADD</button>
+                <button type="button" class="btn cancel" onclick="closeAddPlayer()">Close</button>
+              </form>
+
+          </section>
+<script>
+    $(document).ready(function () {
+$(".owl-carousel").owlCarousel({
+items: 1,
+loop: true,
+center: true,
+autoplay: true,
+margin: 1,
+autoplayTimeout: 2000,
+autoplayHoverPause: true,
+});})
+function openAddteam() {
+  document.getElementById("myteam").style.display = "block";
+}
+
+function closeAddteam() {
+  document.getElementById("myteam").style.display = "none";
+}
+function openAddPlayer() {
+  document.getElementById("myplayer").style.display = "block";
+}
+
+function closeAddPlayer() {
+  document.getElementById("myplayer").style.display = "none";
+}
+function card1(){
+  window.location ="./team1.html"
+}
+function card2(){
+  window.location ="./team2.html"
+}
+function card3(){
+  window.location ="./team3.html"
+}
+function card4(){
+  window.location ="./team4.html"
+}
+function card5(){
+  window.location ="./team5.html"
+}
+ 
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+
+header {
+    background-image: linear-gradient(135deg, #3498db, #e7ac09);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .logo img {
+    height: 70px; 
+  }
+  
+  nav button, .search-button {
+    background-color: grey;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  nav button:hover, .search-button:hover {
+    background-color: #777;
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;}
